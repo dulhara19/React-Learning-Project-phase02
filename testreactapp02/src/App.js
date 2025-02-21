@@ -1,5 +1,6 @@
 import './App.css';
 import ArrayMap from './component/ArrayMap';
+import ArrayFilter from './component/ArrayFilter';
 
 const names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah", "Ivy", "Jack"];
 
@@ -11,8 +12,8 @@ function App() {
 
       <h1> name list</h1>
       <ArrayMap names={names} />
-
-    
+      <h1>filtered name list</h1>
+      <ArrayFilter names={names}/>
 
     </div>
   );

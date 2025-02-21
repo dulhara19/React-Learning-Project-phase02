@@ -1,6 +1,8 @@
 const arrayMap = ({names}) => {
+
+
     return (
-    <div className="App">
+    <div className="">
         
         <ul>
             {
