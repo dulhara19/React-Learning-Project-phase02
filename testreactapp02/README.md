@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+## ArrayFilter Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The `ArrayFilter` component is a React functional component that filters and displays a list of names. Here is a breakdown of how the component works:
 
-## Available Scripts
+### Code Explanation
 
-In the project directory, you can run:
+```jsx
+const ArrayFilter = ({ names }) => {
+  const filteredNames = names.filter((name) =>
+    name.toLowerCase().startsWith("a")
+  ); // filtering names starting with 'a'
+  console.log(filteredNames);
 
-### `yarn start`
+  return (
+    <div className="App">
+      <ul>
+        {filteredNames.map((name, index) => {
+          return <li key={index}>{name}</li>;
+        })}
+      </ul>
+    </div>
+  );
+};
+export default ArrayFilter;
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Detailed Explanation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Component Definition**: The component is defined as a functional component that takes `names` as a prop.
 
-### `yarn test`
+2. **Filtering Names**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   - The `names` array is filtered using the `filter` method.
+   - The filter condition checks if the name starts with the letter 'a' (case-insensitive) using `name.toLowerCase().startsWith("a")`.
 
-### `yarn build`
+3. **Logging Filtered Names**: The filtered names are logged to the console for debugging purposes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Rendering the Filtered List**:
+   - The component returns a `div` containing an unordered list (`ul`).
+   - The `filteredNames` array is mapped to list items (`li`), each displaying a filtered name.
+   - Each list item is given a unique `key` based on its index in the array.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To use the `ArrayFilter` component, pass an array of names as a prop:
 
-### `yarn eject`
+```jsx
+<ArrayFilter
+  names={[
+    "Alice",
+    "Bob",
+    "Charlie",
+    "David",
+    "Eve",
+    "Frank",
+    "Grace",
+    "Hannah",
+    "Ivy",
+    "Jack",
+  ]}
+/>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This will render a list of names that start with the letter 'a'.
