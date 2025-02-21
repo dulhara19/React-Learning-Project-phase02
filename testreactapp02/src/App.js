@@ -3,6 +3,8 @@ import ArrayMap from "./component/ArrayMap";
 import ArrayFilter from "./component/ArrayFilter";
 import ArrayReduce from "./component/ArrayReduce";
 import Foreach from "./component/ForEach";
+import ArrayFind from "./component/ArrayFind";
+import ArrayFindIndex from "./component/ArrayFindIndex";
 
 const names = [
   "Alice",
@@ -28,6 +30,8 @@ function App() {
       <ArrayFilter names={names} />
       <ArrayReduce numberlist={numbers} />
       <Foreach numberlist={numbers} />
+      <ArrayFind numbers={numbers} names={names} />
+      <ArrayFindIndex names={names} />
     </div>
   );
 }
