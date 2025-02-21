@@ -1,6 +1,8 @@
 import "./App.css";
 import ArrayMap from "./component/ArrayMap";
 import ArrayFilter from "./component/ArrayFilter";
+import ArrayReduce from "./component/ArrayReduce";
+import Foreach from "./component/ForEach";
 
 const names = [
   "Alice",
@@ -15,7 +17,7 @@ const names = [
   "Jack",
 ];
 
-//const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
       <ArrayMap names={names} />
       <h1>filtered name list</h1>
       <ArrayFilter names={names} />
+      <ArrayReduce numberlist={numbers} />
+      <Foreach numberlist={numbers} />
     </div>
   );
 }
