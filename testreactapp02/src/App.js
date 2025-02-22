@@ -5,6 +5,7 @@ import ArrayReduce from "./component/ArrayReduce";
 import Foreach from "./component/ForEach";
 import ArrayFind from "./component/ArrayFind";
 import ArrayFindIndex from "./component/ArrayFindIndex";
+import ArraySome from "./component/ArraySome";
 
 const names = [
   "Alice",
@@ -32,6 +33,7 @@ function App() {
       <Foreach numberlist={numbers} />
       <ArrayFind numbers={numbers} names={names} />
       <ArrayFindIndex names={names} />
+      <ArraySome names={names} />
     </div>
   );
 }
