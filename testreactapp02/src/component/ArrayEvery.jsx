@@ -1,6 +1,6 @@
-const ArraySome = ({ names }) => {
+const ArrayEvery = ({ names }) => {
   const letter = "Z";
-  const status = names.some((name) => name.includes(letter));
+  const status = names.every((name) => name.includes(letter));
 
   return (
     <div>
@@ -19,4 +19,4 @@ const ArraySome = ({ names }) => {
     </div>
   );
 };
-export default ArraySome;
+export default ArrayEvery;

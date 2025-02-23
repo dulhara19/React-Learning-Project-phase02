@@ -200,3 +200,22 @@ return (
   </div>
 );
 ```
+
+# every() Method in JavaScript (Used in React Too!)
+
+The `every()` method is a JavaScript array method that checks if **all** elements in an array satisfy a given condition. It returns `true` if every element meets the condition; otherwise, it returns `false`.
+
+## 🔸 When to Use `every()`?
+
+✅ Checking if all values in a list meet a requirement  
+✅ Validating form inputs (e.g., checking if all fields are filled)  
+✅ Ensuring conditions before proceeding with logic  
+✅ Applying strict filtering criteria
+
+## 📝 Example Usage:
+
+```javascript
+const numbers = [2, 4, 6, 8, 10];
+
+// Check if all numbers in the array
+```
