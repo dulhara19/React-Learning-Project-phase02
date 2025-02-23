@@ -1,4 +1,5 @@
 const ArraySlice = ({ names }) => {
+  //in slice method it will not change the original array
   const sortedarray = names.slice(2, 5);
 
   return (
