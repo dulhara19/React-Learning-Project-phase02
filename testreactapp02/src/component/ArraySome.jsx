@@ -1,10 +1,11 @@
 const ArraySome = ({ names }) => {
-  const letter = "A";
+  const letter = "Z";
   const status = names.some((name) => name.includes(letter));
 
   return (
     <div>
-      <h1>Some Method</h1>
+      <hr />
+      <h1>Some Method : chech theres any letter matches with {letter}</h1>
       <table border={1} cellPadding={5}>
         {names.map((name, index) => (
           <tr>
@@ -14,7 +15,7 @@ const ArraySome = ({ names }) => {
         ))}
       </table>
 
-      <p>{status ? "yes" : "no"}</p>
+      <p>{status ? "yes" : "A letter contains {z} is : no"}</p>
     </div>
   );
 };
