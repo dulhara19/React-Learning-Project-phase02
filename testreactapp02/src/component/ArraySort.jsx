@@ -1,5 +1,9 @@
 const ArraySort = ({ names }) => {
-  const sortedarray = names.sort((a, b) => a.localeCompare(b));
+  // in here this sort method overwrites the original array
+  const sortedarray = [...names].sort((a, b) => b.localeCompare(a));
+
+  // so we need to create a new array to store the sorted array, in oredr to display the original array we can use spread operator like this
+  // const sortedarray = [...names].sort((a, b) => b.localeCompare(a));
 
   return (
     <div>
