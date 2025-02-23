@@ -216,6 +216,4 @@ The `every()` method is a JavaScript array method that checks if **all** element
 
 ```javascript
 const numbers = [2, 4, 6, 8, 10];
-
-// Check if all numbers in the array
 ```
