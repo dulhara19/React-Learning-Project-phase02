@@ -10,6 +10,7 @@ import ArrayEvery from "./component/ArrayEvery";
 import ArraySort from "./component/ArraySort";
 import ArraySlice from "./component/ArraySlice";
 import ArraySplice from "./component/ArraySplice";
+import ArrayFlatMap from "./component/ArrayFlatMap";
 
 const names = [
   "Alice",
@@ -42,6 +43,7 @@ function App() {
       <ArraySort names={names} />
       <ArraySlice names={names} />
       <ArraySplice names={names} />
+      <ArrayFlatMap names={names} />
     </div>
   );
 }
