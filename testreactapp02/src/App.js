@@ -8,6 +8,7 @@ import ArrayFindIndex from "./component/ArrayFindIndex";
 import ArraySome from "./component/ArraySome";
 import ArrayEvery from "./component/ArrayEvery";
 import ArraySort from "./component/ArraySort";
+import ArraySlice from "./component/ArraySlice";
 
 const names = [
   "Alice",
@@ -38,6 +39,7 @@ function App() {
       <ArraySome names={names} />
       <ArrayEvery names={names} />
       <ArraySort names={names} />
+      <ArraySlice names={names} />
     </div>
   );
 }
