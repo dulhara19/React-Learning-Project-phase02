@@ -12,6 +12,7 @@ import ArraySlice from "./component/ArraySlice";
 import ArraySplice from "./component/ArraySplice";
 import ArrayFlatMap from "./component/ArrayFlatMap";
 import Fragment from "./component/Fragments";
+import ControlledComp from "./component/ControlledComp";
 
 const names = [
   "Alice",
@@ -31,7 +32,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function App() {
   return (
     <div className="App">
-      <h1> name list</h1>
+      {/* <h1> name list</h1>
       <ArrayMap names={names} />
       <h1>filtered name list</h1>
       <ArrayFilter names={names} />
@@ -45,7 +46,8 @@ function App() {
       <ArraySlice names={names} />
       <ArraySplice names={names} />
       <ArrayFlatMap names={names} />
-      <Fragment />
+      <Fragment /> */}
+      <ControlledComp />
     </div>
   );
 }
