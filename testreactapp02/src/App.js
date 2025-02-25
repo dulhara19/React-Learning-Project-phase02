@@ -11,6 +11,7 @@ import ArraySort from "./component/ArraySort";
 import ArraySlice from "./component/ArraySlice";
 import ArraySplice from "./component/ArraySplice";
 import ArrayFlatMap from "./component/ArrayFlatMap";
+import Fragment from "./component/Fragments";
 
 const names = [
   "Alice",
@@ -44,6 +45,7 @@ function App() {
       <ArraySlice names={names} />
       <ArraySplice names={names} />
       <ArrayFlatMap names={names} />
+      <Fragment />
     </div>
   );
 }
